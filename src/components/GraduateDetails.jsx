@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import createBlockTally from "../utils";
 
 class GraduateDetails extends Component {
   render() {

@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header>
       <h1>TRACK YOUR STUDENTS</h1>
-      <p classList="subheader">
+      <p className="subheader">
         A tracking application to satisfy your northcoder information needs
       </p>
     </header>

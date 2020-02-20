@@ -1,5 +1,14 @@
 const createBlockTally = blockArray => {
-  if (!blockArray.length) return [];
+  if (!blockArray.length) {
+    return [];
+  }
+  const newObj = {};
+  blockArray.map(blockInfo => {
+    return newObj.hasOwnProperty(blockInfo.name)
+      ? (newObj[blockInfo.name] += 1)
+      : (newObj[blockInfo.name] = 1);
+  });
+  return newObj;
 };
 
 /*
