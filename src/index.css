@@ -1,13 +1,46 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Helvetica", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.gradDataView {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.gradAllData {
+}
+
+header {
+  text-align: center;
+  background-color: darkslateblue;
+  padding: 20px 0px;
+  color: white;
+}
+
+h2,
+h3 {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+li {
+  text-align: center;
+  text-decoration: none;
+  padding-bottom: 4px;
+}
+
+nav a {
+  text-align: center;
+  display: block;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+nav {
+  padding-bottom: 30px;
 }
