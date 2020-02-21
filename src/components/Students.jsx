@@ -2,10 +2,11 @@ import React, { Component } from "react";
 import { Link, Router } from "@reach/router";
 import axios from "axios";
 import createBlockTally from "../utils";
-import StudentDetails from "./StudentDetails";
+import DetailedView from "./DetailedView";
 
 class Students extends Component {
   render() {
+    console.log(this.props.detailedStudentData);
     return (
       <section className="DataView">
         {this.props.studentData.length ? (
@@ -32,10 +33,7 @@ class Students extends Component {
 
             <div className="Details">
               <Router>
-                <StudentDetails
-                  path=":id"
-                  detailedStudentData={this.props.detailedStudentData}
-                />
+                <DetailedView path=":id" {...this.props.detailedStudentData} />
               </Router>
             </div>
           </>

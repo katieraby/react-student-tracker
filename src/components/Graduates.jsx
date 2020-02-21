@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import GraduateDetails from "./GraduateDetails";
+import DetailedView from "./DetailedView";
 import { Router, Link } from "@reach/router";
 import axios from "axios";
 import createBlockTally from "../utils";
@@ -32,10 +32,7 @@ class Graduates extends Component {
 
             <div className="Details">
               <Router>
-                <GraduateDetails
-                  path=":id"
-                  detailedGradData={this.props.detailedGradData}
-                />
+                <DetailedView path=":id" {...this.props.detailedGradData} />
               </Router>
             </div>
           </>
@@ -61,7 +58,6 @@ class Graduates extends Component {
         }) => {
           const formattedData = createBlockTally(blockHistory);
           const allData = { ...formattedData, _id, name, startingCohort };
-          console.log(allData);
           this.props.detailedGradUpdate(allData);
         }
       )
