@@ -2,13 +2,13 @@ body {
   font-family: "Helvetica", sans-serif;
 }
 
-.gradDataView {
+.DataView {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-.gradAllData {
+.AllData {
 }
 
 header {

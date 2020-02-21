@@ -7,12 +7,13 @@ import createBlockTally from "../utils";
 class Graduates extends Component {
   render() {
     return (
-      <section className="gradDataView">
+      <section className="DataView">
         {this.props.graduateData.length ? (
           <>
-            <div className="gradAllData">
+            <div className="AllData">
               <ul>
                 <h2>All Graduates</h2>
+                <h3> Total Grads: {this.props.graduateData.length}</h3>
                 {this.props.graduateData.map(grad => {
                   return (
                     <li key={grad._id}>
@@ -29,7 +30,7 @@ class Graduates extends Component {
               </ul>
             </div>
 
-            <div className="gradDetails">
+            <div className="Details">
               <Router>
                 <GraduateDetails
                   path=":id"

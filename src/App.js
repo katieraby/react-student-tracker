@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Nav from "./components/Nav";
 import GradStore from "./components/GradStore";
 import StudentStore from "./components/StudentStore";
+import { Router } from "@reach/router";
 
 class App extends Component {
   render() {
@@ -10,8 +11,10 @@ class App extends Component {
       <div>
         <Header />
         <Nav />
-        <StudentStore />
-        <GradStore />
+        <Router>
+          <GradStore path="/graduates/*" />
+          <StudentStore path="/students/*" />
+        </Router>
       </div>
     );
   }

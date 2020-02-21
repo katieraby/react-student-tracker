@@ -1,18 +1,17 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Router } from "@reach/router";
 import Students from "./Students";
 
 class StudentStore extends Component {
-  state = { studentData: [] };
+  state = { studentData: [], detailedStudentData: [] };
 
   render() {
-    console.log(this.state.studentData);
-
     return (
-      <Router>
-        <Students path="/students" />
-      </Router>
+      <Students
+        studentData={this.state.studentData}
+        detailedStudentData={this.state.detailedStudentData}
+        detailedStudentUpdate={this.detailedStudentUpdate}
+      />
     );
   }
 
@@ -23,6 +22,9 @@ class StudentStore extends Component {
         this.setState({ studentData: students });
       });
   }
+  detailedStudentUpdate = data => {
+    this.setState({ detailedStudentData: data });
+  };
 }
 
 export default StudentStore;

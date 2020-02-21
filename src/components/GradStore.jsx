@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import { Router } from "@reach/router";
 import Graduates from "./Graduates";
-import HomePage from "./HomePage";
 import axios from "axios";
 
 class GradStore extends Component {
@@ -12,15 +10,11 @@ class GradStore extends Component {
 
   render() {
     return (
-      <Router>
-        <HomePage path="/" />
-        <Graduates
-          path="/graduates/*"
-          graduateData={this.state.graduateData}
-          detailedGradData={this.state.detailedGradData}
-          detailedGradUpdate={this.detailedGradUpdate}
-        />
-      </Router>
+      <Graduates
+        graduateData={this.state.graduateData}
+        detailedGradData={this.state.detailedGradData}
+        detailedGradUpdate={this.detailedGradUpdate}
+      />
     );
   }
 
