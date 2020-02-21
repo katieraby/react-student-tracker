@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class StudentDetails extends Component {
+class v extends Component {
   render() {
     return (
       <>
